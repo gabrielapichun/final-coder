@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/* margen de total de pagina{}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body img { /* tamaño imagen banner con logo @*/
+  width: 100%;
+  margin: 0% 0% 2% 0%;
+}
+
+/* estilo menu de nav */
+header {
+  text-align: center;
+  padding: 2% 0% 2% 0%;
+  top: 0%;
+}
+
+header nav ul li a { /* estilo menu de nav  */
+  list-style: none;
+  margin: 0% 1% 0% 1%;
+  display: flex;
+  gap: 30px;
+  margin-right: 100px;
+  color: black;
+  text-decoration: none;
+  font-family: "Playwrite ES Deco", cursive;
+}
+
+/* Flex menu de navegacion */
+.padreflex {
+  display: flex;
+  flex-direction: row;
+  flex-direction: wrap reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-fluid { /*Navegador */
+  background-color: lightgray;
+  text-align: center;
+  padding: 3% 30% 3% 30%;
+  margin: 3%, 0% 10% 0%;
+}
+
+.padreflex { /*Sombreado para navegador */
+  border: black;
+  width: 10%;
+}
+
+/* para nav movible "position: sticky"*/
+.padreflex :hover {
+  background-color: #DE9958;
+  zoom: 50%;
+}
+
+main h1 { /* estilo titulo principal*/
+  text-align: center;
+  font-family: "Playwrite ES Deco", cursive;
+  font-size: 45px;
+  margin: 50px;
+}
+
+main h2 {
+  text-align: center;
+  font-family: "Playwrite ES Deco", cursive;
+  font-size: 30px;
+  margin: 50px;
+}
+
+main p { /* estilo en parrafos */
+  color: black;
+  font-family: "Playwrite ES Deco", cursive;
+  margin: 3% 3% 3% 3%;
+}
+
+main p span {
+  font-weight: bold;
+}
+
+main img { /* tamaño imagen parrafo principal*/
+  width: 30%;
+  text-align: center;
+  padding: 0% 5% 0% 5%;
+  margin: 2% 50% 2% 50%;
+  /* estilo en contactos */
+  margin: 0% 0% 5% 0%;
+  font-family: "Playwrite ES Deco", cursive;
+  font-weight: bold;
+  display: flex;
+}
+
+main .imgespecialidades { /* mixin.scss */
+  width: 400px;
+  height: 230px;
+}
+
+main .imgcontactos { /* mixin.scss */
+  width: 200px;
+  height: 150px;
+}
+
+main .imgccf { /* mixin.scss */
+  width: 450px;
+  height: 300px;
+}
+
+main .imgbebe {
+  width: 450px;
+  height: 300px;
+  text-align: center;
+}
+
+main .transicion { /* moviemiento  */
+  transition: 1s;
+}
+
+.imglactancia {
+  width: 450px;
+  height: 300px;
+  text-align: center;
+}
+
+main .transicion:hover { /* moviemiento */
+  transform: translate(15px, 10px);
+}
+
+.contactos { /* grid imagenes contactos*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: px;
+}
+
+.div22 {
+  grid-area: 1/2/2/3;
+  text-align: center;
+}
+
+.div23 {
+  grid-area: 1/4/2/5;
+  text-align: center;
+}
+
+footer img { /*tamaño banner de footer {}*/
+  width: 100%;
+  align-content: center;
+  margin: 10% 0% 2% 0%;
+}
+
+footer h3 {
+  font-family: "Playwrite ES Deco", cursive;
+  display: flex;
+  font-size: medium;
+  align-content: center;
+  padding: 5% 35% 5% 40%;
+}
+
+/*regla de la media query mobile */
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: rgb(221, 213, 197);
+  }
+  .contactos { /* grid imagenes contactos para mobile*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  .div22 {
+    grid-area: 1/2/2/3;
+    margin: 0% 5% 0% 5%;
+  }
+  .div23 {
+    grid-area: 2/2/3/3;
+    margin: 0% 5% 0% 5%;
+  }
+  .imgespecialidadesgrid { /* grid imagenes estudios complementarios index */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  .div24 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    margin: 0% 1% 0% 1%;
+    grid-area: 1/1/2/2;
+  }
+  .div25 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    margin: 0% 1% 0% 1%;
+    grid-area: 2/1/3/2;
+  }
+  .div26 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    margin: 0% 1% 0% 1%;
+    grid-area: 3/1/4/2;
+  }
+  .div27 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    margin: 0% 1% 0% 1%;
+    grid-area: 4/1/5/2;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  body {
+    background-color: rgb(235, 203, 135);
+  }
+  .imgespecialidadesgrid { /* grid imagenes estudios complementarios index */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 30px;
+    margin: 0% 1% 0% 1%;
+  }
+  .div24 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 1/1/2/2;
+  }
+  .div25 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 1/2/2/3;
+  }
+  .div26 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 2/1/3/2;
+  }
+  .div27 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 2/2/3/3;
+  }
+}
+/*desktop*/
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: rgb(243, 237, 208);
+  }
+  .imgespecialidadesgrid { /* grid imagenes estudios complementarios index */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  .div24 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 1/2/2/3;
+  }
+  .div25 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 1/4/2/5;
+  }
+  .div26 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 2/2/3/3;
+  }
+  .div27 {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid;
+    grid-area: 2/4/3/5;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */
